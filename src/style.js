@@ -20,6 +20,10 @@ export const useStyles = makeStyles((theme) => ({
 
     },
     button: {
-
+        color: "white !important",
+        backgroundColor: theme.palette.primary.main + " !important",
+        border: "5px dashed" + theme.palette.primary.text + "!important",
+        borderRadius: "50% !important",
+        padding: 20
     }
 }));
