@@ -5,6 +5,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Checkbox from '@mui/material/Checkbox';
 import { green, orange, red } from '@mui/material/colors';
 import { useStyles } from './style';
+import Navbar from './component/Navbar';
 
 function App() {
   const classes = useStyles();
@@ -27,6 +28,8 @@ function App() {
 
   return (
     <div className= { classes.root }>
+
+    <Navbar />
 
       <div className={ classes.header }>
         <h1 className='text-5xl'>Test text 5 xl</h1>
