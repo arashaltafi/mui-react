@@ -4,14 +4,7 @@ import { Person } from '@mui/icons-material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Checkbox from '@mui/material/Checkbox';
 import { green, orange, red } from '@mui/material/colors';
-import { makeStyles } from '@mui/styles';
-
-const useStyles = makeStyles((theme) => ({
-  button: {
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.primary.text
-  }
-}));
+import { useStyles } from './style';
 
 function App() {
   const classes = useStyles();
@@ -33,9 +26,9 @@ function App() {
   });
 
   return (
-    <div className={classes.button}>
+    <div className= { classes.root }>
 
-      <div className='flex flex-col items-center justify-center'>
+      <div className={ classes.header }>
         <h1 className='text-5xl'>Test text 5 xl</h1>
         <h1 className='text-4xl'>Test text 4 xl</h1>
         <h1 className='text-3xl'>Test text 3 xl</h1>
