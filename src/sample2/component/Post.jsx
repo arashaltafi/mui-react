@@ -9,7 +9,7 @@ function Post() {
         <Card className="my-6 shadow-lg">
             <CardActionArea>
                 <CardMedia
-                    className="h-[250px]"
+                    className="h-[150px] sm:h-[250px]"
                     component="img"
                     image="https://arashaltafi.ir/arash.jpg"
                     title="Arash 1"
