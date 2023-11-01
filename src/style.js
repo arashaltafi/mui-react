@@ -1,4 +1,5 @@
 import { makeStyles } from '@mui/styles';
+import { hover } from '@testing-library/user-event/dist/hover';
 
 export const useStyles = makeStyles((theme) => ({
     root: {
@@ -24,6 +25,9 @@ export const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.primary.main + " !important",
         border: "5px dashed" + theme.palette.primary.text + "!important",
         borderRadius: "50% !important",
-        padding: 20
+        padding: "15px 50px !important",
+        "&:hover": {
+            backgroundColor: "#ffff55 !important"
+        }
     }
 }));
