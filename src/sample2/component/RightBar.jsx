@@ -1,4 +1,4 @@
-import { useStyles } from "../style";
+import { useStyles } from "../../sample1/style";
 
 function RightBar() {
     const classes = useStyles();
