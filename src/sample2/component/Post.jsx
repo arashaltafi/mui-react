@@ -1,15 +1,17 @@
 import { Container } from "@material-ui/core";
 import { useStyles } from "../style";
-import Post from "./Post";
 
-function Feed() {
+function Post() {
     const classes = useStyles();
 
     return (
         <Container className="pt-2">
-            <Post />
+            <div className="">
+                این پست می باشد
+
+            </div>
         </Container>
     );
 }
 
-export default Feed;
+export default Post;
