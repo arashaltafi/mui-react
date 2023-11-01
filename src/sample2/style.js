@@ -35,12 +35,8 @@ export const useStyles = makeStyles((theme) => ({
         },
         borderRadius: 4,
         width: "50%",
+        [theme.breakpoints.down("sm")]: {
+            display: "none"
+        }
     },
-    input: {
-        color: "white",
-        marginRight: 20
-    },
-    icon: {
-
-    }
 }));
