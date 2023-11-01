@@ -12,12 +12,6 @@ function Navbar() {
   return (
     <AppBar position="fixed" color="primary">
       <Toolbar className="flex flex-row justify-between items-center">
-        {/* <Typography variant="h6" component="h2" className="hidden sm:block">
-                وبلاگ آرش
-            </Typography>
-            <Typography variant="h6" component="h2" className="block sm:hidden">
-                آرش
-            </Typography> */}
         <Typography variant="h6" component="h2" className={classes.logoLg}>
           وبلاگ آرش
         </Typography>
