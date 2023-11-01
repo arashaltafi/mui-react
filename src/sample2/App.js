@@ -11,17 +11,17 @@ function App() {
 
     return (
         <div className={classes.root}>
-            <div>
+            <div className='w-full'>
                 <Navbar />
 
                 <Grid container>
-                    <Grid item sm={3}>
+                    <Grid item sm={3} className='hidden sm:block'>
                         <RightBar />
                     </Grid>
-                    <Grid item sm={7}>
+                    <Grid item sm={7} xs={10}>
                         <Feed />
                     </Grid>
-                    <Grid item sm={2}>
+                    <Grid item sm={2} xs={2}>
                         <LeftBar />
                     </Grid>
                 </Grid>
