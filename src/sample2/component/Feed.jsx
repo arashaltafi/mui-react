@@ -5,7 +5,7 @@ function Feed() {
     const classes = useStyles();
 
     return (
-        <Container className="pt-16">
+        <Container className="pt-2">
             <div className="">
                 این بخش پست ها می باشد
 

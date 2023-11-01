@@ -6,7 +6,7 @@ function LeftBar() {
     const classes = useStyles();
 
     return (
-        <Container className="pt-16">
+        <Container className="pt-2">
             <div className="">
                 <Home className="" />
                 <Typography className="">
