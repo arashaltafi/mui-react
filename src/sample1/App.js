@@ -16,7 +16,7 @@ function App() {
       },
     },
   });
-  
+
   const innerTheme = createTheme({
     palette: {
       primary: {
@@ -26,9 +26,9 @@ function App() {
   });
 
   return (
-    <div className= { classes.root }>
- 
-      <div className={ classes.header }>
+    <div className={classes.root}>
+
+      <div className={classes.header}>
         <h1 className='text-5xl'>Test text 5 xl</h1>
         <h1 className='text-4xl'>Test text 4 xl</h1>
         <h1 className='text-3xl'>Test text 3 xl</h1>
@@ -37,7 +37,7 @@ function App() {
         <h1 className='text-sm'>Test text sm</h1>
       </div>
 
-      <div className='border-t border-t-gray-300 flex flex-col items-center justify-center mt-12 pt-5 child:!mt-4'>
+      <div className='border-t border-t-gray-300 flex flex-col items-center justify-center mt-12 pt-5 child:!mt-4 !mb-16'>
         <p className='text-3xl font-bold'>
           Sample Buttons
         </p>
@@ -69,15 +69,15 @@ function App() {
           Test Button contained info
         </Button>
 
-        <Button variant="contained" color="primary" startIcon={ <Person /> } size='large' style={{ backgroundColor: "red", color: "blue" }}>
+        <Button variant="contained" color="primary" startIcon={<Person />} size='large' style={{ backgroundColor: "red", color: "blue" }}>
           Test Button contained primary startIcon
         </Button>
 
-        <Button variant="contained" color="primary" startIcon={ <Person /> } size='large' className='!bg-red-500'>
+        <Button variant="contained" color="primary" startIcon={<Person />} size='large' className='!bg-red-500'>
           Test Button contained primary startIcon
         </Button>
 
-        <Button variant="contained" color="primary" startIcon={ <Person /> } size='small' className= { classes.button }>
+        <Button variant="contained" color="primary" startIcon={<Person />} size='small' className={classes.button}>
           Test Button contained primary startIcon 1
         </Button>
 
@@ -87,6 +87,10 @@ function App() {
             <Checkbox defaultChecked />
           </ThemeProvider>
         </ThemeProvider>
+
+        <button class="bg-red-500 text-white cursor-pointer p-2 rounded-md hover:bg-red-400 active:scale-105 active:bg-red-600">
+          Test Tailwind Pure
+        </button>
 
       </div>
 
