@@ -25,9 +25,9 @@ function Navbar() {
           <InputBase placeholder="جستجو ..." className="w-full text-white mr-4" />
           <Cancel className="block sm:hidden" onClick={() => setOpen(true)} />
         </div>
-        <div className= {open ? "flex flex-row justify-center items-center gap-x-2" : "hidden"}>
-        <Search className="ml-3 !block sm:!hidden" onClick={() => setOpen(false)} />
-          <Badge badgeContent={4} color="error">
+        <div className={open ? "flex flex-row justify-center items-center gap-x-2" : "hidden"}>
+          <Search className="ml-3 !block sm:!hidden" onClick={() => setOpen(false)} />
+          <Badge badgeContent={4} color="error" className="px-2">
             <Mail />
           </Badge>
           <Badge badgeContent={3} color="secondary">
