@@ -25,7 +25,7 @@ function Post() {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button className="!mx-1" variant="contained" size="small" color="primary" >
+                <Button className="!mx-1 !bg-rose-500" variant="contained" size="small">
                     بیشتر بخوانید
                 </Button>
                 <Button className="!mx-1" variant="outlined" size="small" color="warning">

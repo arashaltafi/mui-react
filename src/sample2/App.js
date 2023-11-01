@@ -5,6 +5,7 @@ import { Card, CardActions, CardContent, Typography, Button, Grid } from '@mater
 import LeftBar from './component/LeftBar';
 import RightBar from './component/RightBar';
 import Feed from './component/Feed';
+import Add from './component/Add';
 
 function App() {
     const classes = useStyles();
@@ -26,19 +27,7 @@ function App() {
                     </Grid>
                 </Grid>
 
-
-                {/* <Card className='mt-32 bg-red-300'>
-                    <CardContent className='bg-green-400'>
-                        <Typography>
-                            Test
-                        </Typography>
-                    </CardContent>
-                    <CardActions className='bg-yellow-400'>
-                        <Button>
-                            Test
-                        </Button>
-                    </CardActions>
-                </Card> */}
+                <Add />
             </div>
         </div>
     );
