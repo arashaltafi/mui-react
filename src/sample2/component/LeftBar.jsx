@@ -5,9 +5,9 @@ function LeftBar() {
     const classes = useStyles();
 
     return (
-        <Container className="pt-2">
+        <Container className="pt-20">
             <div className="">
-                این ساید بار راست می باشد.
+                این ساید بار چپ می باشد.
             </div>
         </Container>
     );

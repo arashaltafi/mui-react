@@ -6,7 +6,9 @@ function Feed() {
     const classes = useStyles();
 
     return (
-        <Container className="pt-2">
+        <Container className="pt-20">
+            <Post />
+            <Post />
             <Post />
         </Container>
     );

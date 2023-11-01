@@ -12,7 +12,7 @@ function Navbar() {
   const classes = useStyles();
 
   return (
-    <AppBar position="static" color="primary">
+    <AppBar className="fixed" color="primary">
       <Toolbar className="flex flex-row justify-between items-center">
         <Typography variant="h6" component="h2" className={classes.logoLg}>
           وبلاگ آرش
