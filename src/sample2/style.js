@@ -26,17 +26,17 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: "space-between",
         alignItems: "center"
     },
-    search: {
-        display: "flex",
-        alignItems: "center",
-        backgroundColor: alpha("#ffffff", 0.15),
-        '&:hover': {
-            backgroundColor: alpha("#ffffff", 0.25)
-        },
-        borderRadius: 4,
-        width: "50%",
-        [theme.breakpoints.down("sm")]: {
-            display: "none"
-        }
-    },
+    // search: {
+    //     display: "flex",
+    //     alignItems: "center",
+    //     backgroundColor: alpha("#ffffff", 0.15),
+    //     '&:hover': {
+    //         backgroundColor: alpha("#ffffff", 0.25)
+    //     },
+    //     borderRadius: 4,
+    //     width: "50%",
+    //     [theme.breakpoints.down("sm")]: {
+    //         display: "none"
+    //     }
+    // },
 }));

@@ -1,12 +1,14 @@
-import { Search, Mail, Notifications } from "@mui/icons-material";
+import { Search, Mail, Notifications, Cancel } from "@mui/icons-material";
 import { useStyles } from "../style";
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import { InputBase } from "@material-ui/core";
 import { Avatar, Badge } from "@mui/material";
+import { useState } from "react";
 
 function Navbar() {
+  const [open, setOpen] = useState(true);
   const classes = useStyles();
 
   return (
@@ -18,12 +20,13 @@ function Navbar() {
         <Typography variant="h6" component="h2" className={classes.logoSm}>
           آرش
         </Typography>
-        <div className={classes.search}>
+        <div className={open ? "hidden" : "flex items-center w-[60%] rounded-[4px] bg-white/[0.15] hover:bg-white/25 sm:hidden sm:w-1/2"}>
           <Search />
-          <InputBase placeholder="جستجو ..." className={classes.input} />
+          <InputBase placeholder="جستجو ..." className="w-full text-white mr-4" />
+          <Cancel className="block sm:hidden" onClick={() => setOpen(true)} />
         </div>
-        <div className="flex flex-row justify-center items-center gap-x-2">
-        <Search className="ml-3 !block sm:!hidden" />
+        <div className= {open ? "flex flex-row justify-center items-center gap-x-2" : "hidden"}>
+        <Search className="ml-3 !block sm:!hidden" onClick={() => setOpen(false)} />
           <Badge badgeContent={4} color="error">
             <Mail />
           </Badge>
