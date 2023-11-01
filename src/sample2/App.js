@@ -15,13 +15,13 @@ function App() {
                 <Navbar />
 
                 <Grid container>
-                    <Grid item sm={3} className='hidden sm:block'>
+                    <Grid item sm={2} xs={2}>
                         <RightBar />
                     </Grid>
                     <Grid item sm={7} xs={10}>
                         <Feed />
                     </Grid>
-                    <Grid item sm={2} xs={2}>
+                    <Grid item sm={3} className='hidden sm:block'>
                         <LeftBar />
                     </Grid>
                 </Grid>

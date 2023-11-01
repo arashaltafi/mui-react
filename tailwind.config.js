@@ -2,8 +2,7 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/flowbite/**/*.js"
-  ],
+    ],
     theme: {
       screens: {
         'xs': '0px',
@@ -24,8 +23,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('flowbite/plugin'),
-    require("daisyui"),
     function ({ addVariant }) {
       addVariant("child", "& > *")
       addVariant("child-hover", "& > *:hover")
