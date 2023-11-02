@@ -1,14 +1,19 @@
 import { useStyles } from "../style";
-import { Tooltip, Fab, Modal, Box, TextField, MenuItem, Select, RadioGroup, Radio, InputLabel, FormLabel, FormControl, FormControlLabel, Button } from '@mui/material';
+import { Tooltip, Fab, Snackbar, Alert, Modal, Box, TextField, MenuItem, Select, RadioGroup, Radio, InputLabel, FormLabel, FormControl, FormControlLabel, Button } from '@mui/material';
 import { Add as AddIcon, Cancel } from '@mui/icons-material';
 import { useState } from "react";
 import { Container } from "@material-ui/core";
 
 function Add() {
     const classes = useStyles();
+
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+    const [openAlert, setOpenAlert] = useState(false);
+    const handleOpenAlert = () => setOpenAlert(true);
+    const handleCloseAlert = () => setOpenAlert(false);
 
     return (
         <>
@@ -24,7 +29,7 @@ function Add() {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Container className="w-screen sm:w-1/3 h-screen sm:h-2/3 bg-white absolute inset-0 m-auto">
+                <Container className="w-screen sm:w-1/3 h-screen sm:h-min bg-white absolute inset-0 m-auto">
                     <div className="flex flex-col items-center justify-center mt-6">
                         <Box
                             component="form"
@@ -69,13 +74,18 @@ function Add() {
                                 </RadioGroup>
                             </div>
                             <div className="flex flex-row gap-x-2 mb-6">
-                                <Button variant="outlined" color="primary">ارسال</Button>
+                                <Button variant="outlined" color="primary" onClick={handleOpenAlert}>ارسال</Button>
                                 <Button variant="outlined" color="secondary" onClick={handleClose}>انصراف</Button>
                             </div>
                         </Box>
                     </div>
                 </Container >
             </Modal >
+            <Snackbar open={openAlert} autoHideDuration={5000} anchorOrigin={{ vertical: 'top', horizontal: 'center' }} onClose={handleCloseAlert}>
+                <Alert onClose={handleCloseAlert} severity="success" sx={{ width: '100%' }}>
+                    پست با موفقیت ارسال شد!
+                </Alert>
+            </Snackbar>
         </>
     );
 }
