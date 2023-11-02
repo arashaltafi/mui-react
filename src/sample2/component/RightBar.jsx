@@ -7,7 +7,7 @@ function RightBar() {
     const classes = useStyles();
 
     return (
-        <Container className="sticky top-0 pt-20 bg-blue-500 sm:bg-gray-50 !h-screen !w-full text-white sm:text-[#555] !shadow-lg sm:!border-l sm:!border-gray-100">
+        <Container className="sticky top-0 py-20 bg-blue-500 sm:bg-gray-50 !h-screen !w-full text-white sm:text-[#555] !shadow-lg sm:!border-l sm:!border-gray-100 overflow-y-auto">
             <div className="flex flex-row gap-x-2 items-center mb-8 sm:mb-6 sm:text-sm cursor-pointer">
                 <Home className="" />
                 <Typography className="hidden sm:block !text-sm">
