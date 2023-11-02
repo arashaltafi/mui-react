@@ -8,12 +8,30 @@ function Add() {
     const classes = useStyles();
 
     const [open, setOpen] = useState(false);
+    const [openSuccessAlert, setOpenSuccessAlert] = useState(false);
+    const [openErrorAlert, setOpenErrorAlert] = useState(false);
+
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    const [openAlert, setOpenAlert] = useState(false);
-    const handleOpenAlert = () => setOpenAlert(true);
-    const handleCloseAlert = () => setOpenAlert(false);
+    const handleOpenErrorAlert = () => setOpenErrorAlert(true);
+    const handleCloseErrorAlert = () => setOpenErrorAlert(false);
+
+    const handleOpenSuccessAlert = () => setOpenSuccessAlert(true);
+    const handleCloseSuccessAlert = () => setOpenSuccessAlert(false);
+
+    const handleSend = () => {
+        handleClose();
+        setTimeout(() => {
+            handleOpenSuccessAlert();
+        }, 500);
+    }
+    const handleCancel = () => {
+        handleClose();
+        setTimeout(() => {
+            handleOpenErrorAlert();
+        }, 500);
+    }
 
     return (
         <>
@@ -74,16 +92,22 @@ function Add() {
                                 </RadioGroup>
                             </div>
                             <div className="flex flex-row gap-x-2 mb-6">
-                                <Button variant="outlined" color="primary" onClick={handleOpenAlert}>ارسال</Button>
-                                <Button variant="outlined" color="secondary" onClick={handleClose}>انصراف</Button>
+                                <Button variant="outlined" color="primary" onClick={handleSend}>ارسال</Button>
+                                <Button variant="outlined" color="secondary" onClick={handleCancel}>انصراف</Button>
                             </div>
                         </Box>
                     </div>
                 </Container >
             </Modal >
-            <Snackbar open={openAlert} autoHideDuration={5000} anchorOrigin={{ vertical: 'top', horizontal: 'center' }} onClose={handleCloseAlert}>
-                <Alert onClose={handleCloseAlert} severity="success" sx={{ width: '100%' }}>
+            <Snackbar open={openSuccessAlert} autoHideDuration={5000} anchorOrigin={{ vertical: 'top', horizontal: 'center' }} onClose={handleCloseSuccessAlert}>
+                <Alert onClose={console.log("Alert closed")} severity="success" sx={{ width: '100%' }}>
                     پست با موفقیت ارسال شد!
+                </Alert>
+            </Snackbar>
+
+            <Snackbar open={openErrorAlert} autoHideDuration={5000} anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }} onClose={handleCloseErrorAlert}>
+                <Alert onClose={console.log("Alert Error closed")} severity="error" sx={{ width: '100%' }}>
+                    شما از ارسال پست انصراف دادید!
                 </Alert>
             </Snackbar>
         </>
